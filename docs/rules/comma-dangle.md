@@ -43,7 +43,7 @@ This rule has a string option and an object option:
 
 ```json
 {
-    "comma-dangle": ["error", "never", {"function": false}]
+    "comma-dangle": ["error", "never", {"functions": false}]
 }
 ```
 
@@ -52,8 +52,8 @@ This rule has a string option and an object option:
 * `"always-multiline"` requires trailing commas when the last element or property is in a *different* line than the closing `]` or `}` and disallows trailing commas when the last element or property is on the *same* line as the closing `]` or `}`
 * `"only-multiline"` allows (but does not require) trailing commas when the last element or property is in a *different* line than the closing `]` or `}` and disallows trailing commas when the last element or property is on the *same* line as the closing `]` or `}`
 
-* `{"function": false}` (default) does not handle trailing comma in functions (ES2017)
-* `{"function": true}` handles trailing comma in functions (ES2017)
+* `{"functions": false}` (default) does not handle trailing comma in functions (ES2017)
+* `{"functions": true}` handles trailing comma in functions (ES2017)
 
 ### never
 
@@ -246,12 +246,12 @@ foo({
 });
 ```
 
-### function
+### functions
 
-Examples of **incorrect** code for this rule with the default `{"function": true}` option:
+Examples of **incorrect** code for this rule with the default `{"functions": true}` option:
 
 ```js
-/*eslint comma-dangle: ["error", "never", {"function": true}]*/
+/*eslint comma-dangle: ["error", "never", {"functions": true}]*/
 
 function foo(a, b,) {
 }
@@ -260,7 +260,7 @@ foo(a, b,);
 ```
 
 ```js
-/*eslint comma-dangle: ["error", "always", {"function": true}]*/
+/*eslint comma-dangle: ["error", "always", {"functions": true}]*/
 
 function foo(a, b) {
 }
@@ -268,10 +268,10 @@ function foo(a, b) {
 foo(a, b);
 ```
 
-Examples of **correct** code for this rule with the default `{"function": true}` option:
+Examples of **correct** code for this rule with the default `{"functions": true}` option:
 
 ```js
-/*eslint comma-dangle: ["error", "never", {"function": true}]*/
+/*eslint comma-dangle: ["error", "never", {"functions": true}]*/
 
 function foo(a, b) {
 }
@@ -280,7 +280,7 @@ foo(a, b);
 ```
 
 ```js
-/*eslint comma-dangle: ["error", "always", {"function": true}]*/
+/*eslint comma-dangle: ["error", "always", {"functions": true}]*/
 
 function foo(a, b,) {
 }
