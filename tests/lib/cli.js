@@ -880,6 +880,17 @@ describe("cli", function() {
             assert.equal(exitCode, 0);
         });
 
+        it("should error if any positional file arguments are passed", function() {
+            const filePath1 = getFixturePath("files", "bar.js");
+            const filePath2 = getFixturePath("files", "foo.js");
+
+            const exitCode = cli.execute("--print-config " + filePath1 + " " + filePath2);
+
+            assert.isTrue(log.info.notCalled);
+            assert.isTrue(log.error.calledOnce);
+            assert.equal(exitCode, 1);
+        });
+
         it("should error out when executing on text", function() {
             const exitCode = cli.execute("--print-config", "foo = bar;");
 
