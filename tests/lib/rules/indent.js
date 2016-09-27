@@ -1612,7 +1612,7 @@ ruleTester.run("indent", rule, {
                 [16, 2, 4, "BlockStatement"],
                 [23, 2, 4, "BlockStatement"],
                 [29, 2, 4, "ForStatement"],
-                [31, 4, 2, "BlockStatement"],
+                [31, 2, 0, "BlockStatement"],
                 [36, 4, 6, "ExpressionStatement"],
                 [38, 2, 4, "BlockStatement"],
                 [39, 4, 2, "ExpressionStatement"],

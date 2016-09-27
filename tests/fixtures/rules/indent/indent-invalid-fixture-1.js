@@ -27,8 +27,8 @@ if (a) {
   }
 
     for (;;) { // <- Fix this when issue #3737 gets resolved
-      v++; // <-
-  }
+    v++; // <-
+}
 
   if ( w ) {
     x++;
